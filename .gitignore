@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+/public/storage
+/codehacking-resources
+Homestead.yaml
+Homestead.json
+.env
