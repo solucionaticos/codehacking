@@ -37,9 +37,9 @@ Route::resource('admin/users', 'AdminUsersController');
 
 // - PHPMyPersonalAdmin (MyPeA) ---------------------------------------------------------------------------
 // composer require bgaze/bootstrap-form
-// Route::get('mypea/{table?}','MypeaController@index');
-// Route::get('mypea/{table?}/new','MypeaController@new');
-// Route::post('mypea/insert','MypeaController@insert');
-// Route::get('mypea/{table}/{id}/edit','MypeaController@edit');
-// Route::put('mypea/update', 'MypeaController@update');
-// Route::get('mypea/{table}/{id}/delete', 'MypeaController@delete');
+Route::get('mypea/{table?}','MypeaController@index');
+Route::get('mypea/{table?}/new','MypeaController@new');
+Route::post('mypea/insert','MypeaController@insert');
+Route::get('mypea/{table}/{id}/edit','MypeaController@edit');
+Route::put('mypea/update', 'MypeaController@update');
+Route::get('mypea/{table}/{id}/delete', 'MypeaController@delete');
