@@ -50,6 +50,17 @@
             </div>
         
             {!! Form::close() !!}
+
+            <hr>
+
+            {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+
+            {!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}
+
+            {!! Form::close() !!}
+
+            <hr>
+
         </div>
     </div>
 

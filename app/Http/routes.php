@@ -23,8 +23,10 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 
-
-Route::resource('admin/users', 'AdminUsersController');
+Route::group(['middleware'=>'admin'], function () {
+    Route::resource('admin/users', 'AdminUsersController');
+    Route::resource('admin/posts', 'AdminPostsController');
+});
 // GET|HEAD  | admin/users              | admin.users.index   | App\Http\Controllers\AdminUsersController@index                 | web        |
 // POST      | admin/users              | admin.users.store   | App\Http\Controllers\AdminUsersController@store                 | web        |
 // GET|HEAD  | admin/users/create       | admin.users.create  | App\Http\Controllers\AdminUsersController@create                | web        |

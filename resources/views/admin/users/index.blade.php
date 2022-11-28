@@ -3,6 +3,8 @@
 @section('content')
     <h1>Users</h1>
 
+    @include('includes.messages')
+
     <table class="table">
         <thead>
             <tr>
